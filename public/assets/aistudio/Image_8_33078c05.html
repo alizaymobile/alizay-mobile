@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#06b6d4", "surface-container-highest": "#2e3545", "on-secondary-container": "#e6ecff", "tertiary-fixed": "#ffddb8", "on-secondary-fixed-variant": "#004395", "on-error-container": "#ffdad6", "secondary": "#adc6ff", "on-secondary-fixed": "#001a42", "surface-container-low": "#141b2b", "secondary-fixed": "#d8e2ff", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#bcc9cd", "surface-container-lowest": "#070e1d", "tertiary-container": "#e79400", "on-tertiary": "#472a00", "on-primary": "#003640", "surface-container": "#191f2f", "secondary-fixed-dim": "#adc6ff", "on-tertiary-fixed-variant": "#653e00", "on-primary-container": "#00424f", "primary": "#4cd7f6", "outline-variant": "#3d494c", "on-secondary": "#002e6a", "inverse-on-surface": "#293040", "on-background": "#dce2f7", "tertiary": "#ffb95f", "primary-fixed-dim": "#4cd7f6", "surface-dim": "#0c1322", "surface-tint": "#4cd7f6", "secondary-container": "#0566d9", "inverse-surface": "#dce2f7", "surface": "#0c1322", "on-tertiary-container": "#563400", "primary-fixed": "#acedff", "inverse-primary": "#00687a", "background": "#0c1322", "surface-container-high": "#232a3a", "on-error": "#690005", "error": "#ffb4ab", "surface-variant": "#2e3545", "outline": "#869397", "on-surface": "#dce2f7", "on-tertiary-fixed": "#2a1700", "error-container": "#93000a", "on-primary-fixed-variant": "#004e5c", "surface-bright": "#323949", "on-primary-fixed": "#001f26" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-tablet": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "2.5rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg-mobile": ["Plus Jakarta Sans"], "label-caps": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-numeric": ["JetBrains Mono"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "700" }], "label-numeric": ["14px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "display-hero": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "800" }], "display-hero-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0c1322;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 0.5rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="VoltGear Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VhZL5AR17zLrfgRa1DdiOojZIKapmo0Z6lfdIIHXC6Hb_Z1F37IOSZtg_AfQYKg1FE8ABFRv7sPOXHdG9iDFcXo_yV7R4WV_3U79WgkkLrd70kiraH2ZGNNd3l73-lqH52zIKxzFmHmTuoPTs6jkT5PcR0wnfnYD2soi65GoXQdttu-TgoLyPm9kW-l6ZA_3F6jp4GfsuT1wnjoQjSXa4X5CvG5So4HEVK8Xb2MDllOn3GBOlA6WYwigU"/><div class="flex flex-col"><span class="text-body-sm font-body-sm text-primary tracking-widest uppercase">VoltGear</span><span class="text-headline-sm font-headline-sm text-on-surface leading-tight">Admin Portal</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search Catalog" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary active:scale-95 transition-all"><span class="material-symbols-outlined text-[24px]">search</span></button><button aria-label="Shopping Cart with 3 items" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary active:scale-95 transition-all"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1.5 right-1.5 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-on-primary font-label-numeric text-[10px] leading-none font-bold">3</span></button><div class="flex items-center justify-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTg-gRYnSXuzfYm6B4uoRPDd_ZzzfjSNygOc7DsGEkm6nmYLDQ93rjO30-vPd8a_C-HIhHe1Dtrfusya6WGjjg1zahIapWSn_Y2PHWmGhKd8ITO9oEMrn6bTzWXHmCBuTQrAVTmarc0pHl7zPEzSOPl1hftDX7Phzhg2yGAjm-OJ3JOIsQ7YYv3Nb3ZUkfqZfGyRj_DhnNJiVtLhrZ_Mf6QvYwAQN3yvZDXaP431Hk8XEMv5ZcSIQw"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter space-y-space-md">
+<!-- Live Pulse Notification Toast -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-space-sm shadow-xl transition-all duration-300" id="order-toast">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/5 pointer-events-none"></div>
+<div class="relative flex items-center justify-between gap-space-sm z-10">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px] animate-pulse" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="absolute -top-0.5 -right-0.5 flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold truncate">New Order #VG-1048</span>
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-caps text-[10px]">COD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Alex Morgan • $80.10 • 2m ago</p>
+</div>
+</div>
+<button class="shrink-0 px-2.5 py-1.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 active:scale-95 transition-all font-label-caps text-label-caps uppercase flex items-center gap-1" onclick="scrollToOrder('VG-1048')">
+<span>Review</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Key Metrics Track -->
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Card 1: Today Sales -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-space-md shadow-md">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Total Sales (Today)</span>
+<div class="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+<span>+18.4%</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">$2,845.50</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs $2,402.00</span>
+</div>
+<!-- Mini Sparkline SVG -->
+<div class="mt-2.5 h-7 w-full">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 240 28">
+<defs>
+<lineargradient id="cyanGlow" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,22 Q30,19 60,14 T120,18 T180,8 T240,3 L240,28 L0,28 Z" fill="url(#cyanGlow)"></path>
+<path d="M0,22 Q30,19 60,14 T120,18 T180,8 T240,3" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="2"></path>
+<circle cx="240" cy="3" fill="#4cd7f6" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Metrics Pair -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 2: Orders Total -->
+<div class="rounded-xl bg-surface-container-high p-space-md flex flex-col justify-between shadow-md">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Orders</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">receipt_long</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">42</span>
+<div class="mt-1 flex flex-col gap-0.5">
+<span class="font-body-sm text-[11px] text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 8 Pending COD
+            </span>
+<span class="font-body-sm text-[11px] text-secondary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 26 Processing
+            </span>
+</div>
+</div>
+</div>
+<!-- Card 3: Inventory Watch -->
+<div class="rounded-xl bg-surface-container-high p-space-md flex flex-col justify-between shadow-md">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Stock Alert</span>
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-error font-bold">3 Items</span>
+<p class="mt-1 font-body-sm text-[11px] text-on-surface-variant leading-tight">
+            Critical threshold (&lt;10 units reserve)
+          </p>
+</div>
+<div class="mt-2 w-full bg-surface-container-lowest rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Segmented Switcher Controls -->
+<div class="flex p-1 bg-surface-container-lowest rounded-xl">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-high text-primary font-headline-sm text-body-sm font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5" id="tab-orders" onclick="switchView('orders')">
+<span class="material-symbols-outlined text-[18px]">list_alt</span>
+<span>Orders (42)</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-on-surface-variant font-headline-sm text-body-sm font-semibold hover:text-on-surface transition-all flex items-center justify-center gap-1.5" id="tab-upload" onclick="switchView('upload')">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Upload Product</span>
+</button>
+</div>
+<!-- SECTION 1: Orders Pipeline Feed -->
+<div class="space-y-space-sm" id="section-orders">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Incoming Feed</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-numeric text-[11px]">Real-time</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Filter</span>
+</button>
+</div>
+<!-- Order Item 1 (Highlighted COD) -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-space-md shadow-md transition-all" id="order-VG-1048">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-numeric text-label-numeric text-primary font-bold">#VG-1048</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-caps text-[10px] font-bold">COD PENDING</span>
+</div>
+<span class="font-label-numeric text-body-sm font-bold text-on-surface">$80.10</span>
+</div>
+<div class="mt-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Alex Morgan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+1 (555) 392-8821</span>
+</div>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">2 mins ago</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-lowest/50 rounded-lg p-2 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">inventory_2</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">CyberShield Carbon Case + GaN 65W Pod</p>
+</div>
+<span class="font-label-numeric text-[11px] text-on-surface-variant shrink-0">2 items</span>
+</div>
+<div class="mt-3 flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-headline-sm text-body-sm font-bold hover:bg-primary-fixed-dim active:scale-95 transition-all flex items-center justify-center gap-1.5 shadow-sm" onclick="markProcessing(this, 'VG-1048')">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Mark Verified &amp; Processing</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center hover:text-on-surface active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Order Item 2 -->
+<div class="rounded-xl bg-surface-container-high p-space-md shadow-md space-y-2.5">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-numeric text-label-numeric text-on-surface font-bold">#VG-1047</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-caps text-[10px] font-bold">PROCESSING</span>
+</div>
+<span class="font-label-numeric text-body-sm font-bold text-on-surface">$34.99</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Sarah Jenkins</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+1 (555) 741-2094</span>
+</div>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">34 mins ago</span>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-lg p-2 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">bolt</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">Braided 240W Kevlar Cable (2m)</p>
+</div>
+<span class="font-label-numeric text-[11px] text-on-surface-variant shrink-0">1 item</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-secondary font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-[15px]">package_2</span>
+<span>Boxed at Depot Hub A</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary hover:bg-surface-bright font-label-caps text-label-caps uppercase transition-colors">
+          Dispatch
+        </button>
+</div>
+</div>
+<!-- Order Item 3 -->
+<div class="rounded-xl bg-surface-container-high p-space-md shadow-md space-y-2.5 opacity-90">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-numeric text-label-numeric text-on-surface font-bold">#VG-1046</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-caps text-[10px] font-bold">DELIVERED</span>
+</div>
+<span class="font-label-numeric text-body-sm font-bold text-on-surface">$124.50</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">David Kim</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+1 (555) 903-4122</span>
+</div>
+<span class="font-label-numeric text-[11px] text-on-surface-variant">2h ago</span>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-lg p-2 flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">shield</span>
+<p class="font-body-sm text-body-sm text-on-surface truncate">MagSafe Armor Stand + 100W GaN Station</p>
+</div>
+<span class="font-label-numeric text-[11px] text-on-surface-variant shrink-0">2 items</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>
+          Signature captured on delivery
+        </span>
+<button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary uppercase">
+          Archive
+        </button>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Product Upload Form Preview (Toggleable) -->
+<div class="hidden space-y-space-md" id="section-upload">
+<div class="rounded-xl bg-surface-container-high p-space-md shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">New Hardware Listing</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure specs and push live to catalog</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-caps text-[10px]">DRAFT</span>
+</div>
+<!-- Product Title -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Product Name</label>
+<div class="relative rounded-lg bg-surface-container-lowest p-0.5">
+<input class="w-full h-11 px-3 bg-transparent text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none font-body-md text-body-md" placeholder="e.g. 100W 4-Port GaN Desktop Charger" type="text"/>
+</div>
+</div>
+<!-- Category Select -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Hardware Category</label>
+<div class="relative rounded-lg bg-surface-container-lowest">
+<select class="w-full h-11 px-3 bg-transparent text-on-surface focus:outline-none font-body-md text-body-md appearance-none">
+<option class="bg-surface-container text-on-surface">Chargers &amp; GaN Docks</option>
+<option class="bg-surface-container text-on-surface">Rugged Armor Cases</option>
+<option class="bg-surface-container text-on-surface">Screen Protectors &amp; Glass</option>
+<option class="bg-surface-container text-on-surface">Acoustic &amp; Audio Gear</option>
+<option class="bg-surface-container text-on-surface">Tactical EDC Accessories</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Pricing Dual Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Regular ($)</label>
+<div class="rounded-lg bg-surface-container-lowest px-3 flex items-center h-11">
+<span class="text-on-surface-variant font-label-numeric mr-1">$</span>
+<input class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none font-label-numeric text-body-md" placeholder="89.99" type="number"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Sale Price ($)</label>
+<div class="rounded-lg bg-surface-container-lowest px-3 flex items-center h-11">
+<span class="text-primary font-label-numeric mr-1">$</span>
+<input class="w-full bg-transparent text-primary placeholder:text-on-surface-variant/50 focus:outline-none font-label-numeric text-body-md font-bold" placeholder="69.99" type="number"/>
+</div>
+</div>
+</div>
+<!-- Stock & Inventory State -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Initial Units</label>
+<div class="rounded-lg bg-surface-container-lowest px-3 flex items-center h-11">
+<input class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none font-label-numeric text-body-md" placeholder="150" type="number"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Availability</label>
+<div class="relative rounded-lg bg-surface-container-lowest">
+<select class="w-full h-11 px-3 bg-transparent text-on-surface focus:outline-none font-body-md text-body-md appearance-none">
+<option class="bg-surface-container text-on-surface">In Stock</option>
+<option class="bg-surface-container text-on-surface">Pre-Order</option>
+<option class="bg-surface-container text-on-surface">Backorder</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Media Asset Dropzone Box -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Product Visuals</label>
+<div class="rounded-xl bg-surface-container-lowest/80 p-5 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-lowest transition-all">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface">Upload High-Res Renders</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Drag transparent PNGs or tap to inspect file storage</p>
+<span class="mt-2.5 px-3 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-caps text-[10px]">Max 12MB (4000x4000px)</span>
+</div>
+</div>
+<!-- Product Description -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Tech Specifications &amp; Copy</label>
+<div class="rounded-lg bg-surface-container-lowest p-3">
+<textarea class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none font-body-sm text-body-sm resize-none" placeholder="Describe thermal dissipation, material grade, and wattage matrix..." rows="3"></textarea>
+</div>
+</div>
+<!-- Primary Action Submission -->
+<div class="pt-2">
+<button class="w-full py-3.5 px-4 rounded-xl bg-primary text-on-primary font-headline-sm text-body-lg font-bold hover:bg-primary-fixed-dim active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-lg" onclick="publishProduct(this)">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+<span>Publish Product to Storefront</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchView(tab) {
+    const ordersBtn = document.getElementById('tab-orders');
+    const uploadBtn = document.getElementById('tab-upload');
+    const ordersSec = document.getElementById('section-orders');
+    const uploadSec = document.getElementById('section-upload');
+
+    if (tab === 'orders') {
+      ordersBtn.className = 'flex-1 py-2 px-3 rounded-lg bg-surface-container-high text-primary font-headline-sm text-body-sm font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5';
+      uploadBtn.className = 'flex-1 py-2 px-3 rounded-lg text-on-surface-variant font-headline-sm text-body-sm font-semibold hover:text-on-surface transition-all flex items-center justify-center gap-1.5';
+      ordersSec.classList.remove('hidden');
+      uploadSec.classList.add('hidden');
+    } else {
+      uploadBtn.className = 'flex-1 py-2 px-3 rounded-lg bg-surface-container-high text-primary font-headline-sm text-body-sm font-semibold transition-all shadow-sm flex items-center justify-center gap-1.5';
+      ordersBtn.className = 'flex-1 py-2 px-3 rounded-lg text-on-surface-variant font-headline-sm text-body-sm font-semibold hover:text-on-surface transition-all flex items-center justify-center gap-1.5';
+      uploadSec.classList.remove('hidden');
+      ordersSec.classList.add('hidden');
+    }
+  }
+
+  function scrollToOrder(id) {
+    switchView('orders');
+    const el = document.getElementById('order-' + id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('scale-[1.02]');
+      setTimeout(() => el.classList.remove('scale-[1.02]'), 600);
+    }
+  }
+
+  function markProcessing(btn, orderId) {
+    btn.innerHTML = `<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Syncing...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Verified & Dispatched</span>`;
+      btn.className = "flex-1 py-2 px-3 rounded-lg bg-surface-container-highest text-primary font-headline-sm text-body-sm font-bold flex items-center justify-center gap-1.5 transition-all";
+      btn.disabled = true;
+    }, 700);
+  }
+
+  function publishProduct(btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Uploading Hardware Asset...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">verified</span><span>Live on Storefront!</span>`;
+      btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+        switchView('orders');
+      }, 1200);
+    }, 1000);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary"><div class="flex justify-around items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant transition-colors" data-path="shop" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-caps text-label-caps mt-1 uppercase">Shop</span></a><a class="relative flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant transition-colors" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center w-4 h-4 rounded-full bg-primary text-on-primary font-label-numeric text-[9px] font-bold">3</span></div><span class="font-label-caps text-label-caps mt-1 uppercase">Cart</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[24px]">local_shipping</span><span class="font-label-caps text-label-caps mt-1 uppercase">Orders</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 transition-colors text-primary" data-path="admin-portal" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-caps text-label-caps mt-1 uppercase">Admin</span></a></div></nav></body></html>

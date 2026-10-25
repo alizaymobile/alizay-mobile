@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#06b6d4", "surface-container-highest": "#2e3545", "on-secondary-container": "#e6ecff", "tertiary-fixed": "#ffddb8", "on-secondary-fixed-variant": "#004395", "on-error-container": "#ffdad6", "secondary": "#adc6ff", "on-secondary-fixed": "#001a42", "surface-container-low": "#141b2b", "secondary-fixed": "#d8e2ff", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#bcc9cd", "surface-container-lowest": "#070e1d", "tertiary-container": "#e79400", "on-tertiary": "#472a00", "on-primary": "#003640", "surface-container": "#191f2f", "secondary-fixed-dim": "#adc6ff", "on-tertiary-fixed-variant": "#653e00", "on-primary-container": "#00424f", "primary": "#4cd7f6", "outline-variant": "#3d494c", "on-secondary": "#002e6a", "inverse-on-surface": "#293040", "on-background": "#dce2f7", "tertiary": "#ffb95f", "primary-fixed-dim": "#4cd7f6", "surface-dim": "#0c1322", "surface-tint": "#4cd7f6", "secondary-container": "#0566d9", "inverse-surface": "#dce2f7", "surface": "#0c1322", "on-tertiary-container": "#563400", "primary-fixed": "#acedff", "inverse-primary": "#00687a", "background": "#0c1322", "surface-container-high": "#232a3a", "on-error": "#690005", "error": "#ffb4ab", "surface-variant": "#2e3545", "outline": "#869397", "on-surface": "#dce2f7", "on-tertiary-fixed": "#2a1700", "error-container": "#93000a", "on-primary-fixed-variant": "#004e5c", "surface-bright": "#323949", "on-primary-fixed": "#001f26" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-tablet": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "2.5rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg-mobile": ["Plus Jakarta Sans"], "label-caps": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-numeric": ["JetBrains Mono"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-caps": ["11px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "700" }], "label-numeric": ["14px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "display-hero": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "800" }], "display-hero-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "400" }], "headline-md": ["22px", { lineHeight: "30px", letterSpacing: "-0.015em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0c1322;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 0.5rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="VoltGear Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VhZL5AR17zLrfgRa1DdiOojZIKapmo0Z6lfdIIHXC6Hb_Z1F37IOSZtg_AfQYKg1FE8ABFRv7sPOXHdG9iDFcXo_yV7R4WV_3U79WgkkLrd70kiraH2ZGNNd3l73-lqH52zIKxzFmHmTuoPTs6jkT5PcR0wnfnYD2soi65GoXQdttu-TgoLyPm9kW-l6ZA_3F6jp4GfsuT1wnjoQjSXa4X5CvG5So4HEVK8Xb2MDllOn3GBOlA6WYwigU"/><div class="flex flex-col"><span class="text-body-sm font-body-sm text-primary tracking-widest uppercase">VoltGear</span><span class="text-headline-sm font-headline-sm text-on-surface leading-tight">Shop</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search Catalog" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary active:scale-95 transition-all"><span class="material-symbols-outlined text-[24px]">search</span></button><button aria-label="Shopping Cart with 3 items" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary active:scale-95 transition-all"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute top-1.5 right-1.5 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-primary text-on-primary font-label-numeric text-[10px] leading-none font-bold">3</span></button><div class="flex items-center justify-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTg-gRYnSXuzfYm6B4uoRPDd_ZzzfjSNygOc7DsGEkm6nmYLDQ93rjO30-vPd8a_C-HIhHe1Dtrfusya6WGjjg1zahIapWSn_Y2PHWmGhKd8ITO9oEMrn6bTzWXHmCBuTQrAVTmarc0pHl7zPEzSOPl1hftDX7Phzhg2yGAjm-OJ3JOIsQ7YYv3Nb3ZUkfqZfGyRj_DhnNJiVtLhrZ_Mf6QvYwAQN3yvZDXaP431Hk8XEMv5ZcSIQw"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter pb-8 gap-space-lg">
+<!-- Search & Filter Controls -->
+<section class="flex flex-col gap-space-sm w-full">
+<div class="flex items-center gap-space-sm w-full">
+<div class="relative flex items-center flex-1 min-w-0 h-12 rounded-xl bg-surface-container-high px-space-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mr-space-sm select-none">search</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" id="productSearchInput" placeholder="Search 65W GaN, MagSafe, 9H glass..." type="text"/>
+<button aria-label="Clear Search" class="hidden items-center justify-center w-7 h-7 rounded-full text-outline-variant hover:text-on-surface active:scale-90 transition-all" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<button aria-label="Open filter matrix" class="relative flex items-center justify-center w-12 h-12 rounded-xl bg-surface-container-high text-primary hover:bg-surface-container-highest active:scale-95 transition-all shadow-sm" id="filterTriggerBtn" type="button">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span>
+</button>
+</div>
+<!-- Active Filter Summary Strip -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps px-space-xs uppercase">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Showing 6 Engineered Items</span>
+</div>
+<button class="text-primary hover:underline lowercase font-body-sm text-body-sm">reset all</button>
+</div>
+</section>
+<!-- Promotional Hero Banner: CYBER CHARGE WEEK -->
+<section class="relative w-full rounded-2xl bg-gradient-to-br from-surface-container-high via-surface-container-low to-surface-container-lowest p-space-lg shadow-xl overflow-hidden">
+<!-- Ambient Specular Glow Effect -->
+<div class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-primary/15 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-36 h-36 rounded-full bg-tertiary/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Tag & Live Countdown -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-caps text-label-caps tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Cyber Charge Week</span>
+</div>
+<div class="inline-flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container-highest/80 text-tertiary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]">timer</span>
+<span id="countdownPill">18:42:09</span>
+</div>
+</div>
+<!-- Hero Typography -->
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+          Up to <span class="text-primary">40% OFF</span> GaN Power &amp; Armor
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Military-grade drop protection meets aerospace 100W gallium nitride density.
+        </p>
+</div>
+<!-- Action & Mini Metric -->
+<div class="flex items-center gap-space-md pt-1">
+<button class="flex items-center justify-center gap-2 px-space-lg py-3 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm hover:brightness-110 active:scale-95 transition-all shadow-md" type="button">
+<span>Explore Deals</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-numeric text-[11px] text-on-surface-variant">Free Express</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Orders Over $45</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filter Pills (Horizontal Scroll) -->
+<section class="flex flex-col gap-space-xs -mx-gutter px-gutter">
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-1">
+<button class="category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-primary text-on-primary shadow-sm transition-all active:scale-95" data-category="all" type="button">
+        All
+      </button>
+<button class="category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-95" data-category="chargers" type="button">
+        Chargers (65W/100W)
+      </button>
+<button class="category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-95" data-category="cases" type="button">
+        Armor Covers
+      </button>
+<button class="category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-95" data-category="glass" type="button">
+        9H Glass Protectors
+      </button>
+<button class="category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-95" data-category="audio" type="button">
+        ANC Earbuds
+      </button>
+<button class="category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-95" data-category="wallets" type="button">
+        MagSafe Wallets
+      </button>
+</div>
+</section>
+<!-- Price Range Filter Chips -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Target Price Tier</span>
+<span class="font-label-numeric text-[11px] text-primary">USD ($)</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs w-full">
+<button class="price-chip py-2 px-1 text-center rounded-lg bg-surface-container font-label-numeric text-[12px] text-on-surface-variant hover:text-on-surface active:bg-primary/20 transition-all" type="button">
+        &lt;$25
+      </button>
+<button class="price-chip py-2 px-1 text-center rounded-lg bg-primary/10 text-primary font-label-numeric text-[12px] font-bold shadow-sm transition-all" type="button">
+        $25-$50
+      </button>
+<button class="price-chip py-2 px-1 text-center rounded-lg bg-surface-container font-label-numeric text-[12px] text-on-surface-variant hover:text-on-surface active:bg-primary/20 transition-all" type="button">
+        $50-$100
+      </button>
+<button class="price-chip py-2 px-1 text-center rounded-lg bg-surface-container font-label-numeric text-[12px] text-on-surface-variant hover:text-on-surface active:bg-primary/20 transition-all" type="button">
+        Premium
+      </button>
+</div>
+</section>
+<!-- Product Catalog Grid (2 columns on mobile) -->
+<section class="grid grid-cols-2 gap-space-md w-full">
+<!-- Item 1: VoltCharge 65W GaN -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container p-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Futuristic compact matte black dual USB-C GaN wall charger with glowing ice-cyan LED power indicator ring and folding prongs set against dark carbon fiber studio podium, cinematic hyper-realistic product lighting, 8k render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPYxqqeAzdpQp_CRBTKtTveFiXfHr4HZ6T0dvu-GDxhCown_tJ9e7wplAZikMej5oGw_qMCYgFKSDg893SdCrrQ4dDu6g3V5EQqwCKZeFAUVoCUDn_iHdoQ0MYURrGofnDln0jmzYC3nXOa3hkPfmcYxcZ-ZMrKd0Dxb8BADEh5iC93Pl-_OQ1Ubmvgche-z2CdvnfjfHwotWElLNEBoZripcCd5azDz9ivWSpM2MIbJ2Xf-D6s2z3"/>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary font-label-caps text-[10px] uppercase font-bold">
+          -30%
+        </span>
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface/70 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col gap-1 mt-2.5">
+<div class="flex items-center gap-1 text-tertiary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-outline text-[10px]">(1.2k)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-tight">
+          VoltCharge 65W GaN Dual USB-C
+        </h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Ultra-compact travel hub</p>
+</div>
+<div class="flex items-end justify-between mt-3 pt-2">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric text-primary font-bold leading-tight">$34.99</span>
+<span class="font-label-numeric text-[11px] text-outline line-through leading-none">$49.99</span>
+</div>
+<button aria-label="Add VoltCharge 65W GaN to cart" class="add-to-cart-btn flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-on-primary hover:brightness-110 active:scale-90 transition-all shadow-sm" data-name="VoltCharge 65W GaN" data-price="34.99" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Item 2: CyberShield MagSafe Titanium Case -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container p-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Stealth aerospace titanium smartphone armor case with exposed MagSafe magnetic ring matrix, cyan anodized aluminum corner bumpers, placed on dark slate laboratory pedestal, macro industrial design tech photograph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjV4EsdhsALooC8vwCGWmE2w4APLiFa7bIX0WUZrtifGQw4UxWq7zYNL9l7giWFbLCTcdMxUeA1yYIur6OXev2PFgP1JJxpoNVO4HHFdJXxmLmVJJMTYR39yuAEIHeOieqbbCz4AbXXl9Mx9aeVidA47EQPG-19P_xuimb6mnn0yhG7qXy482pJXOIBuFxCumyzQ3bgZ5ycfPZVFa2yLTgc81kLISu0uVwMsjTe020BwkKdEahng-7"/>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-primary/20 text-primary font-label-caps text-[10px] uppercase font-bold">
+          -25%
+        </span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface/85 backdrop-blur-md text-on-surface-variant font-label-caps text-[9px] uppercase">
+          14ft Drop
+        </span>
+</div>
+<div class="flex flex-col gap-1 mt-2.5">
+<div class="flex items-center gap-1 text-tertiary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-outline text-[10px]">(840)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-tight">
+          CyberShield MagSafe Titanium Case
+        </h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">MIL-STD-810H Certified</p>
+</div>
+<div class="flex items-end justify-between mt-3 pt-2">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric text-primary font-bold leading-tight">$29.99</span>
+<span class="font-label-numeric text-[11px] text-outline line-through leading-none">$39.99</span>
+</div>
+<button aria-label="Add CyberShield Case to cart" class="add-to-cart-btn flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-on-primary hover:brightness-110 active:scale-90 transition-all shadow-sm" data-name="CyberShield Case" data-price="29.99" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Item 3: DiamondEdge 9H Privacy Glass (2-Pack) -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container p-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Tempered privacy screen protector hovering over modern smartphone display showing 28 degree two-way privacy tint, electric cyan laser alignment guide frame kit, clean tech studio aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANoSKzjYCH3UlTz4FnKjswIqqBbNPa4S7ZHfIohfXsjijdi6cC1TVgPSNcMf6c2B6MUtJSZIbXgtm0MfyloMIL4_sIPrGZEcWzrY-6zWMkDVJpThc3ceDpS5Z9-S1kw_ImuXirlEgRBn4eX-jpYfhBLt-m9pCQRBQn4MLPtVnDnnwrjWW8FWfEEZdotrovzjhoPOFUeMkDVZhV3VRk6wSpvfp9juaLCTTMkk9gen2V11uBx3fo0qFo"/>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface/85 backdrop-blur-md text-primary font-label-caps text-[9px] uppercase">
+          Auto-Align Box
+        </span>
+</div>
+<div class="flex flex-col gap-1 mt-2.5">
+<div class="flex items-center gap-1 text-tertiary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.7</span>
+<span class="text-outline text-[10px]">(2.4k)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-tight">
+          DiamondEdge 9H Privacy Glass
+        </h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">2-Pack with installer</p>
+</div>
+<div class="flex items-end justify-between mt-3 pt-2">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric text-primary font-bold leading-tight">$18.99</span>
+<span class="font-label-numeric text-[11px] text-outline line-through leading-none">$24.99</span>
+</div>
+<button aria-label="Add DiamondEdge Glass to cart" class="add-to-cart-btn flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-on-primary hover:brightness-110 active:scale-90 transition-all shadow-sm" data-name="DiamondEdge Glass" data-price="18.99" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Item 4: AeroBuds Pro Hi-Res ANC Wireless -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container p-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Gunmetal grey wireless in-ear audiophile noise-canceling earbuds emerging from translucent frosted magnetic charging shell with glowing battery status bar, dramatic specular high-contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgmVO7ZzP1OVbg6mZmZL-oYoevZhMe8RBJQqIuDm5yG6m_5ru37K1OttttNfyPZIxi2hWbkl-JOagWEr_tS5HqDfW8SdAVoZ8gHzI-TpPzTxWTUhYScw10A-T4VJ-iBc2FAnlB1BlOPJNfbb1iXvGyPDY7xROnq4J3lL-ChUWJUJPrAEr6eB63r9LPBcXqouEUOg3GotpJfcJdruzhG5Efjiqp8m1Uc5N0QCPjR6_QCItfbCGpttqe"/>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary font-label-caps text-[10px] uppercase font-bold">
+          -30%
+        </span>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface/85 backdrop-blur-md text-on-surface font-label-caps text-[9px] uppercase">
+          40h Playback
+        </span>
+</div>
+<div class="flex flex-col gap-1 mt-2.5">
+<div class="flex items-center gap-1 text-tertiary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-outline text-[10px]">(530)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-tight">
+          AeroBuds Pro Hi-Res ANC
+        </h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">48dB Hybrid active quiet</p>
+</div>
+<div class="flex items-end justify-between mt-3 pt-2">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric text-primary font-bold leading-tight">$69.99</span>
+<span class="font-label-numeric text-[11px] text-outline line-through leading-none">$99.99</span>
+</div>
+<button aria-label="Add AeroBuds Pro ANC to cart" class="add-to-cart-btn flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-on-primary hover:brightness-110 active:scale-90 transition-all shadow-sm" data-name="AeroBuds Pro ANC" data-price="69.99" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Item 5: VoltMag 10,000mAh Magnetic Power Bank -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container p-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Slim magnetic 10000mAh battery pack with digital LED percentage display snapped firmly onto phone rear surface, cybernetic slate finish with cyan accent lines, precision engineering studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcAYr2UCFTudIPGyJVwh0dtc36O9hcdNHB7FNdGKj36xUNMdVDhJgCHlxazUUpZipvESKq8QLmOuaJcJ230ILkPBrArB3Pm7GlXAXSrAD0Erp6BTvlYdy4YB9cXSimp5myzTOUyGlEKvkJvuHqVBOYGle6d5cwL-rLAzMTKWBIlqcGaa7G1Rm4ddrxd5WJz_3eyg1lSDBzHkWIyAiz4SiWG79FIiJQGRX-B-wjw402S_pY9nwA19Nu"/>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface/85 backdrop-blur-md text-primary font-label-caps text-[9px] uppercase">
+          15W Qi2 Snap
+        </span>
+</div>
+<div class="flex flex-col gap-1 mt-2.5">
+<div class="flex items-center gap-1 text-tertiary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-outline text-[10px]">(410)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-tight">
+          VoltMag 10k Power Bank
+        </h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Bi-directional 30W USB-C</p>
+</div>
+<div class="flex items-end justify-between mt-3 pt-2">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric text-primary font-bold leading-tight">$44.99</span>
+<span class="font-label-numeric text-[11px] text-outline line-through leading-none">$59.99</span>
+</div>
+<button aria-label="Add VoltMag Power Bank to cart" class="add-to-cart-btn flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-on-primary hover:brightness-110 active:scale-90 transition-all shadow-sm" data-name="VoltMag 10k Power Bank" data-price="44.99" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+<!-- Item 6: Braided Kevlar USB-C 240W Cable -->
+<article class="flex flex-col justify-between rounded-xl bg-surface-container p-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Close up of reinforced black ballistic aramid fiber braided USB-C cable coil with anodized aerospace aluminum connector shell and blue neon wattage display on plug, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwdeDmgfm6BYQ5SBsjleLV9su8BHWrQdr668ttAr3GYOJUx8NBKhF5WBZJXlx3JWh1gv6llpgjAKjuS79r1sGgk7VQgaZf5Z6CzkiIVQdyYKGrOXsz2q2N5D-uv1FeaYrt-ReSCL_1ljxSW2y3FVjg0vgAQyIQ1iVGoxwcvLkZoccMjxhGdunxLoWxqWgbHG_M_fTmPzYZRIQ9CHKQu2A_iqYKqY4JNmUX9UQg0ZJgSMEITlCCzfgN"/>
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded bg-surface/85 backdrop-blur-md text-on-surface-variant font-label-caps text-[9px] uppercase">
+          Lifetime Care
+        </span>
+</div>
+<div class="flex flex-col gap-1 mt-2.5">
+<div class="flex items-center gap-1 text-tertiary font-label-numeric text-[11px]">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-outline text-[10px]">(3.1k)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 leading-tight">
+          Kevlar USB-C 240W Cable
+        </h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">E-Marker PD3.1 2 Meter</p>
+</div>
+<div class="flex items-end justify-between mt-3 pt-2">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric text-primary font-bold leading-tight">$14.99</span>
+<span class="font-label-numeric text-[11px] text-outline line-through leading-none">$19.99</span>
+</div>
+<button aria-label="Add Kevlar Cable to cart" class="add-to-cart-btn flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-on-primary hover:brightness-110 active:scale-90 transition-all shadow-sm" data-name="Kevlar 240W Cable" data-price="14.99" type="button">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Engineered Guarantee Micro-Banner -->
+<section class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-high/60 backdrop-blur-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[13px] text-on-surface leading-snug">VoltGear 2-Year Direct Warranty</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Instant swap replacement guarantee</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">chevron_right</span>
+</section>
+<!-- Reactive Floating Toast Notification -->
+<aside aria-live="polite" class="fixed bottom-20 left-4 right-4 z-40 transform translate-y-28 opacity-0 pointer-events-none transition-all duration-300 ease-out flex items-center justify-between p-3.5 rounded-2xl bg-surface-container-highest/95 backdrop-blur-xl shadow-2xl text-on-surface" id="cartToast">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[13px] text-on-surface truncate" id="toastItemTitle">Item added to cart!</span>
+<span class="font-label-numeric text-[11px] text-primary" id="toastPriceSummary">Total: $34.99</span>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-caps text-label-caps uppercase font-bold shrink-0" href="#">
+      Checkout
+    </a>
+</aside>
+</div>
+<script>
+  // Countdown Timer Simulation
+  (function initCountdown() {
+    const countdownEl = document.getElementById('countdownPill');
+    if (!countdownEl) return;
+    let totalSeconds = 18 * 3600 + 42 * 60 + 9;
+    setInterval(() => {
+      if (totalSeconds <= 0) totalSeconds = 24 * 3600;
+      totalSeconds--;
+      const hours = Math.floor(totalSeconds / 3600).toString().padStart(2, '0');
+      const minutes = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, '0');
+      const seconds = (totalSeconds % 60).toString().padStart(2, '0');
+      countdownEl.textContent = `${hours}:${minutes}:${seconds}`;
+    }, 1000);
+  })();
+
+  // Search input clear interaction
+  const searchInput = document.getElementById('productSearchInput');
+  const clearBtn = document.getElementById('clearSearchBtn');
+  if (searchInput && clearBtn) {
+    searchInput.addEventListener('input', (e) => {
+      if (e.target.value.length > 0) {
+        clearBtn.classList.remove('hidden');
+        clearBtn.classList.add('flex');
+      } else {
+        clearBtn.classList.add('hidden');
+        clearBtn.classList.remove('flex');
+      }
+    });
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearBtn.classList.add('hidden');
+      clearBtn.classList.remove('flex');
+      searchInput.focus();
+    });
+  }
+
+  // Category pill tab toggle
+  const categoryPills = document.querySelectorAll('.category-pill');
+  categoryPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      categoryPills.forEach(p => {
+        p.className = 'category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-95';
+      });
+      pill.className = 'category-pill shrink-0 px-space-md py-2 rounded-full font-label-caps text-label-caps uppercase bg-primary text-on-primary shadow-sm transition-all active:scale-95';
+    });
+  });
+
+  // Price Chip toggle
+  const priceChips = document.querySelectorAll('.price-chip');
+  priceChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      priceChips.forEach(c => {
+        c.className = 'price-chip py-2 px-1 text-center rounded-lg bg-surface-container font-label-numeric text-[12px] text-on-surface-variant hover:text-on-surface active:bg-primary/20 transition-all';
+      });
+      chip.className = 'price-chip py-2 px-1 text-center rounded-lg bg-primary/10 text-primary font-label-numeric text-[12px] font-bold shadow-sm transition-all';
+    });
+  });
+
+  // Add to Cart Micro-Interaction & Toast
+  let toastTimer = null;
+  const toast = document.getElementById('cartToast');
+  const toastItemTitle = document.getElementById('toastItemTitle');
+  const toastPriceSummary = document.getElementById('toastPriceSummary');
+  const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+  addToCartButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const name = btn.getAttribute('data-name') || 'Item';
+      const price = btn.getAttribute('data-price') || '0.00';
+
+      // Button Haptic Pulse feedback
+      btn.classList.add('scale-75', 'bg-tertiary', 'text-on-tertiary');
+      setTimeout(() => {
+        btn.classList.remove('scale-75', 'bg-tertiary', 'text-on-tertiary');
+      }, 160);
+
+      // Trigger Toast
+      if (toast && toastItemTitle && toastPriceSummary) {
+        toastItemTitle.textContent = `${name} added to cart`;
+        toastPriceSummary.textContent = `Total: $${price}`;
+        toast.classList.remove('translate-y-28', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('translate-y-28', 'opacity-0', 'pointer-events-none');
+          toast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+        }, 3200);
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-low/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary"><div class="flex justify-around items-center h-16 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-12 transition-colors text-primary" data-path="shop" href="#"><span class="material-symbols-outlined text-[24px]">storefront</span><span class="font-label-caps text-label-caps mt-1 uppercase">Shop</span></a><a class="relative flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant transition-colors" data-path="cart" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center w-4 h-4 rounded-full bg-primary text-on-primary font-label-numeric text-[9px] font-bold">3</span></div><span class="font-label-caps text-label-caps mt-1 uppercase">Cart</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant transition-colors" data-path="orders" href="#"><span class="material-symbols-outlined text-[24px]">local_shipping</span><span class="font-label-caps text-label-caps mt-1 uppercase">Orders</span></a><a class="flex flex-col items-center justify-center w-16 h-12 text-on-surface-variant transition-colors" data-path="admin-portal" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-caps text-label-caps mt-1 uppercase">Admin</span></a></div></nav></body></html>

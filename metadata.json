@@ -1,0 +1,6 @@
+{
+  "name": "Alizeh Mobile Shop",
+  "description": "Pakistan's trusted mobile-responsive e-commerce hub for premium smartphones and authentic mobile accessories with live catalog and admin controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
